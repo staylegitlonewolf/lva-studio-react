@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import ScrollArrow from '../components/ScrollArrow';
 import ScrollToTop from '../components/ScrollToTop';
 

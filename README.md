@@ -44,38 +44,31 @@ npm run build
 
 ## Deployment
 
-### Docker Deployment
+### Static Site Deployment
 
-To build and run using Docker:
+This is a frontend React application that can be deployed as a static site. After building:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run build
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+The built files can be deployed to any static hosting service:
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+- **GitHub Pages** (already configured)
+- **Netlify**
+- **Vercel**
+- **AWS S3 + CloudFront**
+- **Firebase Hosting**
+- **Surge.sh**
 
-### DIY Deployment
+### Build Output
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+The build process creates static files in the `build/` directory:
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
 ├── build/
 │   ├── client/    # Static assets
-│   └── server/    # Server-side code
+│   └── server/    # Server-side code (if using SSR)
 ```
 
 ## Styling

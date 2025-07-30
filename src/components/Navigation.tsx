@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navigation() {
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light');

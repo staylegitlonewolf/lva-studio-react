@@ -196,19 +196,26 @@ html[data-theme="dark"] .navbar {
 }
 
 .theme-toggle {
-    background: none;
-    border: none;
-    color: var(--text-primary);
+    background: var(--accent);
+    border: 2px solid var(--accent);
+    color: white;
     font-size: 1.2rem;
     cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
+    padding: 10px 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    font-weight: 600;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover {
-    background-color: var(--bg-secondary);
-    transform: scale(1.1);
+    background-color: transparent;
+    color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .theme-toggle i {
@@ -339,14 +346,12 @@ html[data-theme="dark"] .hero {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--accent), #4ecdc4);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    color: white;
-    font-size: 1.5rem;
+    color: var(--accent);
+    font-size: 2rem;
 }
 
 .service-card h3 {
@@ -937,7 +942,8 @@ html[data-theme="dark"] .hero {
 
     .theme-toggle {
         font-size: 1rem;
-        padding: 6px;
+        padding: 8px 10px;
+        min-width: 40px;
     }
 
     .logo-text {
@@ -981,4 +987,85 @@ html[data-theme="dark"] .hero {
         top: -30px;
         font-size: 1.5rem;
     }
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--shadow);
+    background: var(--text-primary);
+}
+
+.scroll-arrow i {
+    transition: transform 0.3s ease;
+}
+
+.scroll-arrow:hover i {
+    transform: translateY(2px);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--shadow);
+    background: var(--text-primary);
+}
+
+.scroll-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover i {
+    transform: translateY(-2px);
 }

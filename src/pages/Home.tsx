@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollArrow from '../components/ScrollArrow';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function Home() {
   const [stats, setStats] = useState({
@@ -75,7 +77,7 @@ export default function Home() {
             {/* Web Development */}
             <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-code"></i>
+                <i className="fas fa-laptop-code"></i>
               </div>
               <h3>Web Development</h3>
               <p>Custom websites that convert visitors into customers. Built with modern technologies and optimized for performance.</p>
@@ -90,7 +92,7 @@ export default function Home() {
             {/* Solar Solutions */}
             <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-solar-panel"></i>
+                <i className="fas fa-sun"></i>
               </div>
               <h3>Solar Solutions</h3>
               <p>Connect with trusted solar providers to reduce energy costs and contribute to a sustainable future.</p>
@@ -105,7 +107,7 @@ export default function Home() {
             {/* Health Insurance */}
             <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-shield-alt"></i>
+                <i className="fas fa-heartbeat"></i>
               </div>
               <h3>Health Insurance</h3>
               <p>Comprehensive health insurance solutions for individuals, families, and businesses with competitive pricing and excellent coverage.</p>
@@ -138,7 +140,7 @@ export default function Home() {
             {/* NIL Partnerships */}
             <div className="service-card">
               <div className="service-icon">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-handshake"></i>
               </div>
               <h3>NIL Partnerships</h3>
               <p>Maximize your Name, Image, and Likeness opportunities with strategic partnerships and brand development.</p>
@@ -187,6 +189,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Scroll Arrow */}
+      <ScrollArrow targetId="services" />
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 }

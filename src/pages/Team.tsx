@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ScrollArrow from '../components/ScrollArrow';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface TeamMember {
   name: string;
@@ -89,7 +91,7 @@ export default function Team() {
       </section>
 
       {/* Team Section */}
-      <section className="team">
+      <section id="team" className="team">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">Our Expert Team</h2>
@@ -135,6 +137,12 @@ export default function Team() {
           </div>
         </div>
       )}
+      
+      {/* Scroll Arrow */}
+      <ScrollArrow targetId="team" />
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 } 

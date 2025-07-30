@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ScrollArrow from '../components/ScrollArrow';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface Certification {
   state: string;
@@ -128,7 +130,7 @@ export default function Certifications() {
       </section>
 
       {/* Certifications Section */}
-      <section className="certifications">
+      <section id="certifications" className="certifications">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="section-title">State Licenses & Certifications</h2>
@@ -177,6 +179,12 @@ export default function Certifications() {
           </div>
         </div>
       )}
+      
+      {/* Scroll Arrow */}
+      <ScrollArrow targetId="certifications" />
+      
+      {/* Scroll to Top */}
+      <ScrollToTop />
     </div>
   );
 } 

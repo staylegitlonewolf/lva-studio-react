@@ -47,12 +47,12 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
-            <a href="/#services" className="nav-link">
+            <a href="/services" className="nav-link">
               Services
             </a>
           </li>
           <li>
-            <a href="/#about" className="nav-link">
+            <a href="/about" className="nav-link">
               About
             </a>
           </li>
